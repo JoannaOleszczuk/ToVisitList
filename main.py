@@ -3,17 +3,24 @@ Cost = ""
 Date = ""
 PersonAmount = 0
 KeyboardInput = ""
+AskUser = ""
 
-while True:
-    KeyboardInput = input("Do jakiego miasta jedziesz? (wpisz koniec, gdy chcesz zakończyć działanie programu) ")
-    if KeyboardInput == "koniec":
-        break
-    Cost = input("Ile kosztuje pobyt za osobę? ")
-    Date = input("Podaj miesiąc wyjazdu:")
-    PersonAmount = input("Podaj liczbę osób: ")
-    ListElement = [KeyboardInput, Cost, Date, PersonAmount]
-    PlacesToVisit.append(ListElement)
+AskUser = input("Wybierz tryb w jakim chcesz wpisywać odpowiedzi: auto czy manual: ")
 
+if AskUser == "manual":
+    while True:
+        KeyboardInput = input("Do jakiego miasta jedziesz? (wpisz koniec, gdy chcesz zakończyć działanie programu) ")
+        if KeyboardInput == "koniec":
+            break
+        Cost = input("Ile kosztuje pobyt za osobę? ")
+        Date = input("Podaj miesiąc wyjazdu:")
+        PersonAmount = input("Podaj liczbę osób: ")
+        ListElement = [KeyboardInput, Cost, Date, PersonAmount]
+        PlacesToVisit.append(ListElement)
+elif AskUser == "auto":
+    ListElements =[]
+else:
+    print("Wybrałeś złą opcję :( ")
 # print("Miasta do których chcę pojechać to ", end="")
 # for Cities in PlacesToVisit:
 #     print(str(Cities), end=", ")
