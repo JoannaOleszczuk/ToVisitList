@@ -2,8 +2,8 @@ PlacesToVisit = []
 Cost = ""
 Date = ""
 PersonAmount = 0
-
 KeyboardInput = ""
+
 while True:
     KeyboardInput = input("Do jakiego miasta jedziesz? (wpisz koniec, gdy chcesz zakończyć działanie programu) ")
     if KeyboardInput == "koniec":
